@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+<title>Inicio:Etsi Cloud</title>
+
+
+</h:head> 
+<body> 
+
+<h1 style="text-align:center"> ETSI CLOUD </h1>
+
+<table border="1" align="right" width="100">
+  <tr>
+    <th bgcolor="#00ffff">Inicio sesion</th>
+  </tr>
+  <tr>
+  <td>
+    <h:form>
+   <h:outputText value="Nombre: "/>
+ <h:inputText id="nombre" required="true" value="#{altaMB.nombre}" requieredMessage="ERROR: tienes que introducir tu nombre"/>
+	</h:form>
+    </td>
+  </tr>
+  <tr>
+    <h:outputText value="Contraseña:"/>
+<h:inputSecret id="pass" required="true"/>
+
+  </tr>
+</table>
+
+
+<h:panelGrid  border="1" columns="1" width="200">
+ <f:facet name="header">
+ <h:outputText value="Temas"/></f:facet>
+ <h:column>
+ <h:outputLink value="universidad.xhtml">
+ <h:outputText value="Universidad" />
+	</h:outputLink>
+ </h:column>
+ <h:column>
+<h:outputLink value="anuncios.xhtml">
+ <h:outputText value="Anuncios" />
+	</h:outputLink>
+  </h:column>
+</h:panelGrid>
+
+<br></br>
+
+<h:panelGrid  style="background-color: Green; 
+bottom: 0px; left: 0px; right: 0px; top: 0px; width: 200px" >
+	<h3>   Ultimas noticias!!</h3>
+
+</h:panelGrid>
+
+
+
+
+
+
+</body> 
+</html> 
