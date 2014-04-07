@@ -1,36 +1,90 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
 
-<title> ETSI CLOUD</title>
+<title>Inicio:Etsi Cloud</title>
+<link rel="stylesheet" type="text/css" href="estilos.css" />
 
-<link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
 
-</h:head> 
-<body> 
-<h:form>
-<h:panelGrid border="1" columns="1" text-align= "right">
- <f:facet name="header">
- <h:outputText value="Inicio sesión"/></f:facet>
- <h:column>
- <h:outputText value="Nombre "/>
+</h:head>
+<body>
+
+<div id="global">
+<h1 style="text-align:center"> ETSI CLOUD </h1>
+<div id="sesion">
+<table border="1" width="100%">
+  <tr>
+    <th bgcolor="#00ffff">Inicio sesion</th>
+  </tr>
+  <tr>
+  <td>
+   <h:form>
+   <h:outputText value="Nombre: "/>
  <h:inputText id="nombre" required="true" value="#{altaMB.nombre}" requieredMessage="ERROR: tienes que introducir tu nombre"/>
- </h:column>
- <h:column>
-<h:outputText value="Contraseña"/>
-<h:inputSecret id="pass" required="true"/>
-  </h:column>
+</h:form>
+    </td>
+  </tr>
+  <tr>
+    <h:outputText value="Contraseña:"/>
+<h:inputSecret id="pass" required="true" value="#{altaMB.pass}"/>
 
+  </tr>
+</table>
+</div>
+
+<div id="temas">
+<table  width="100%" >
+<tr >
+<th>Temas</th>
+</tr>
+<tr>
+<td height="100px">
+<h:outputLink value="universidad.xhtml">
+ <h:outputText value="Universidad" />
+ </h:outputLink>
+ </td>
+</tr>
+ <tr>
+ <td>
+ <div id="universidad">
+<h:outputLink value="anuncios.xhtml">
+ <h:outputText value="Anuncios" />
+</h:outputLink>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<div id="ultimas">
+
+<h:panelGrid width="100%">
+<h3> Ultimas noticias!!</h3>
+<h:dataTable value="#{appList.productos}" var="lista">
+			<h:column>
+				<f:facet name="header">Titular</f:facet>
+				<h:outputText value="#{ultimasNoticias.nombre}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Link</f:facet>
+				<h:outputText value="#{ultimasNoticas.link}" />
+			</h:column>
+
+			
+
+		</h:dataTable>
+		
 </h:panelGrid>
 
+</div>
 
-	 
-	
-</h:form>
 
-</body> 
-</html>
+
+</div>
+</body>
+</html> 
