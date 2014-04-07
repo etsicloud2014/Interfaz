@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+body{
+  
+  
+background-image: url("http://bgfons.com/upload/clouds_texture2872.jpg");
+}
+h1
+{
+	text-align: center;
+
+}
+table
+{
+	border-width: 2px;
+	borher-color: pink;
+        font-family:  arial;
+        color : black
+}
+th
+{
+	background: black;
+	color: pink
+} 
+
+#global {
+ width:100%; height:100%;
+
+ 
+}
+#sesion {
+ width:25%;
+ margin: 0 auto 0 auto;
+ background-color: #B4ff68;
+ float: right;
+}
+#temas {
+ width:25%;
+ margin: 0 auto 0 auto;
+
+ float: left;
+}
+ #universidad{
+ background-image: url("http://www.ehu.es/p200-content/es/contenidos/noticia/ciea_inaguruacion_261109/es_ciea/images/ciea.jpg");
+ }
+ 
+
+
+
+#ultimas {
+ width:50%;
+ margin: 0 auto 0 auto;
+ background-color: #B4ff68;
+ float: center;
+}
