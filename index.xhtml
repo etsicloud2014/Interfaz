@@ -20,52 +20,89 @@
   <tr>
     <th bgcolor="#00ffff">Inicio sesion</th>
   </tr>
+     <h:form>
   <tr>
   <td>
-   <h:form>
-   <h:outputText value="Nombre: "/>
+
+   <h:outputText value="Nombre: " style="background-color:white"/>
  <h:inputText id="nombre" required="true" value="#{altaMB.nombre}" requieredMessage="ERROR: tienes que introducir tu nombre"/>
-</h:form>
+
     </td>
   </tr>
   <tr>
-    <h:outputText value="Contraseña:"/>
+  <td>
+    <h:outputText value="Contraseña:" style="background-color:white"/>
 <h:inputSecret id="pass" required="true" value="#{altaMB.pass}"/>
 
+</td>
   </tr>
+  <tr>
+  <td>
+  <h:commandButton action="void" value="Login"/>
+  </td>
+  </tr>
+  </h:form>
 </table>
 </div>
 
 <div id="temas">
+<form method="post" action="mailto:etsicloud2014@gmail.com">
 <table  width="100%" >
+
 <tr >
 <th>Temas</th>
 </tr>
 <tr>
 <td height="100px">
-<h:outputLink value="universidad.xhtml">
+<div id="universidad">
+<h:outputLink value="universidad.xhtml" style="background-color:white">
  <h:outputText value="Universidad" />
  </h:outputLink>
+ </div>
  </td>
 </tr>
  <tr>
- <td>
- <div id="universidad">
-<h:outputLink value="anuncios.xhtml">
+ 
+
+ <td height="100px">
+  <div id="anuncios">
+<h:outputLink value="anuncios.xhtml" style="background-color:white">
  <h:outputText value="Anuncios" />
 </h:outputLink>
 </div>
 </td>
+
 </tr>
+<tr>
+<td>
+<br /><br /><br /><br /><br /><br /><br />
+<h2>FEEDBACK</h2>
+</td>
+</tr>
+
+<tr>
+<td>
+<h:outputText value="Escriba su sugerencia para mejorar nuestra web"  style="color:white" />
+<br />
+<textarea name="sugerencias"></textarea>
+<br />
+<input type="submit" value="Enviar"/>
+</td>
+</tr>
+
+
 </table>
+</form>
 </div>
+
+
 
 
 <div id="ultimas">
 
 <h:panelGrid width="100%">
 <h3> Ultimas noticias!!</h3>
-<h:dataTable value="#{appList.productos}" var="lista">
+<h:dataTable value="#{appList.productos}" var="lista" style="background-color:white">
 			<h:column>
 				<f:facet name="header">Titular</f:facet>
 				<h:outputText value="#{ultimasNoticias.nombre}" />
