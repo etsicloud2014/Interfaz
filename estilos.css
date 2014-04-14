@@ -68,3 +68,13 @@ th
  margin: 0 auto 0 auto;
  float: center;
 }
+#home{
+	text-align: center;
+	color:white;
+	font-size: 50;
+}
+#logo{
+	height: 100x;
+	width: 130px;
+	background-position: 50% 0%;
+}
