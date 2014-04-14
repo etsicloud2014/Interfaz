@@ -3,11 +3,24 @@
 body{
   
   
-background-image: url("http://bgfons.com/upload/clouds_texture2872.jpg");
+background-image: url("http://hdfondos.com/wp-content/uploads/2010/11/iphone-retina-display-0003.jpg");
 }
 h1
 {
 	text-align: center;
+	color: aqua;
+
+}
+h2
+{
+	text-align: center;
+	color: aqua;
+
+}
+h3
+{
+	text-align: center;
+	color: white;
 
 }
 table
@@ -19,8 +32,8 @@ table
 }
 th
 {
-	background: black;
-	color: pink
+	background: aqua;
+	color: black
 } 
 
 #global {
@@ -31,7 +44,6 @@ th
 #sesion {
  width:25%;
  margin: 0 auto 0 auto;
- background-color: #B4ff68;
  float: right;
 }
 #temas {
@@ -41,15 +53,18 @@ th
  float: left;
 }
  #universidad{
- background-image: url("http://www.ehu.es/p200-content/es/contenidos/noticia/ciea_inaguruacion_261109/es_ciea/images/ciea.jpg");
+ background-image: url("http://www.red-redial.net/images/noticias/6737-instituto-europeo-curso.jpg");
+ height: 100px;
  }
- 
+  #anuncios{
+ background-image: url("http://www.coruna.es/IMG/P_Contenido_1396579080834_1000_1000_A_2da66cad67fd181edff84af84522b5c.png");
+ height: 100px;
+ }
 
 
 
 #ultimas {
  width:50%;
  margin: 0 auto 0 auto;
- background-color: #B4ff68;
  float: center;
 }
