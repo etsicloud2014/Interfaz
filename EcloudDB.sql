@@ -2,16 +2,19 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `EcloudDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+DROP SCHEMA IF EXISTS `EcloudDB` ;
+CREATE SCHEMA IF NOT EXISTS `EcloudDB` DEFAULT CHARACTER SET latin1 ;
 USE `EcloudDB` ;
 
 -- -----------------------------------------------------
 -- Table `EcloudDB`.`Categoria`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `EcloudDB`.`Categoria` ;
+
 CREATE  TABLE IF NOT EXISTS `EcloudDB`.`Categoria` (
   `idCategoria` INT NOT NULL ,
-  `Tema` VARCHAR(45) NULL ,
-  `Subtema` VARCHAR(45) NULL ,
+  `Tema` VARCHAR(45) NULL DEFAULT NULL ,
+  `Subtema` VARCHAR(45) NULL DEFAULT NULL ,
   PRIMARY KEY (`idCategoria`) )
 ENGINE = InnoDB;
 
@@ -19,11 +22,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `EcloudDB`.`Noticias`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `EcloudDB`.`Noticias` ;
+
 CREATE  TABLE IF NOT EXISTS `EcloudDB`.`Noticias` (
   `idNoticias` INT NOT NULL AUTO_INCREMENT ,
   `Titulo` VARCHAR(45) NOT NULL ,
-  `Fuente` VARCHAR(45) NULL ,
-  `Fecha` VARCHAR(45) NULL ,
+  `Fuente` VARCHAR(45) NULL DEFAULT NULL ,
+  `Fecha` VARCHAR(45) NULL DEFAULT NULL ,
   `Link` VARCHAR(128) NOT NULL ,
   `Categoria_idCategoria` INT NOT NULL ,
   PRIMARY KEY (`idNoticias`) ,
@@ -39,14 +44,16 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `EcloudDB`.`Usuarios`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `EcloudDB`.`Usuarios` ;
+
 CREATE  TABLE IF NOT EXISTS `EcloudDB`.`Usuarios` (
   `idUsuarios` INT NOT NULL AUTO_INCREMENT ,
   `Nick` VARCHAR(45) NOT NULL ,
   `Pass` VARCHAR(45) NOT NULL ,
-  `Nombre` VARCHAR(45) NULL ,
-  `Apellido` VARCHAR(45) NULL ,
-  `Admin` TINYINT(1) NULL ,
-  `Correo` VARCHAR(45) NULL ,
+  `Nombre` VARCHAR(45) NULL DEFAULT NULL ,
+  `Apellido` VARCHAR(45) NULL DEFAULT NULL ,
+  `Admin` TINYINT(1) NULL DEFAULT NULL ,
+  `Correo` VARCHAR(45) NULL DEFAULT NULL ,
   PRIMARY KEY (`idUsuarios`) ,
   UNIQUE INDEX `Nick_UNIQUE` (`Nick` ASC) )
 ENGINE = InnoDB;
@@ -55,6 +62,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `EcloudDB`.`Usuarios_has_Categoria`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `EcloudDB`.`Usuarios_has_Categoria` ;
+
 CREATE  TABLE IF NOT EXISTS `EcloudDB`.`Usuarios_has_Categoria` (
   `Usuarios_idUsuarios` INT NOT NULL ,
   `Categoria_idCategoria` INT NOT NULL ,
